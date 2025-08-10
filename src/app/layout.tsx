@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// fonts
+import { Figtree, Urbanist } from "next/font/google";
+import { Banner } from "./components/landingPage/components/banner";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const figtree = Figtree({
+  variable: "--font-figtree",
+  weight: ["800", "700", "600", "500", "400"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,9 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${figtree.variable} ${urbanist.variable} antialiased`}>
+        <Banner />
         {children}
       </body>
     </html>
