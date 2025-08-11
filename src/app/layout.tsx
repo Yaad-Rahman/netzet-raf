@@ -8,12 +8,14 @@ const figtree = Figtree({
   variable: "--font-figtree",
   weight: ["800", "700", "600", "500", "400"],
   display: "swap",
+  subsets: ['latin']
 });
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
   weight: ["400", "700"],
   display: "swap",
+  subsets: ['latin']
 });
 
 export const metadata: Metadata = {
